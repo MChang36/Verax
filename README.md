@@ -1,2 +1,6 @@
 # Verax
-Veracross but shady. Add students, add tests, see their grade average.
+Minimalist Veracross. Add students, add tests, see their grade average.
+
+## Requirements
+Python 3.X
+Django
