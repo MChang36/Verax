@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block navbar %}
+
+<nav class="navbar navbar-expand-lg" style="background-color: darkblue;">
+    <div class="container">
+        <div class="homebutton">
+            <a class="btn" href="{% url 'students' %}" aria-pressed="true">
+                <img src="{% static "grader/Veracross.png" %}" height="60px">
+            </a>
+        </div>
+
+        <div class="nav-item">
+            <a class="btn btn-outline-light btn-lg" href="{% url 'students' %}">View Students</a>
+        </div>
+
+        <div class="nav-item">
+            <a class="btn btn-outline-light btn-lg" href="{% url 'tests' %}">View Tests</a>
+        </div>
+
+        <div class="nav-item">
+            <a class="btn btn-outline-light btn-lg" href="{% url 'create' %}">Add Test</a>
+        </div>
+
+    </div>
+</nav>
+{% endblock navbar %}

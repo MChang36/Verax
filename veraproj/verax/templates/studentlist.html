@@ -1,0 +1,15 @@
+{% extends 'base_nav.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="scrolling-wrapper">
+        {% for student in object_list %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ student.name }}</h5>
+                <p class="card-text">{{ student.calculated_ave }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
