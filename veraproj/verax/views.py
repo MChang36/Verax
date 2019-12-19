@@ -39,3 +39,15 @@ class TestCreate(CreateView):
 
     def get_success_url(self):
         return reverse('students')
+
+class StudentCreate(CreateView):
+    model = Student
+    fields = ['name']
+    template_name = "student_form.html"
+
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('students')

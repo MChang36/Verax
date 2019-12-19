@@ -14,14 +14,23 @@
     background-color: darkblue;
 }
 
+
 .card:hover {
     background-color: #000099;
 }
 
-h2, h5, p, small {
+h5, p, small {
     color: white;
 }
 
 body {
-    background-color: lightslategray;
+  background-image: url("DA.png");
+}
+
+h2 {
+    margin: 20px;
+}
+
+.form-margin {
+    margin: 20px;
 }
