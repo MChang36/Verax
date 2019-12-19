@@ -19,7 +19,7 @@ class Student(models.Model):
             self.average = (self.average + amt)/2
             self.save(update_fields=['average'])
 
-    #used
+    #unused
     def calculated_ave(self):
         my_tests = Test.objects.all().filter(student=self)
         print(my_tests)
@@ -33,7 +33,7 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
-#irrelevent
+#unused
 def updateAverage(instance, created, **kwargs):
     if created:
         student = instance.student
@@ -48,5 +48,5 @@ class Test(models.Model):
     def __str__(self):
         return "{}-{}".format(self.student, self.name)
 
-#irrelevent
+#unused
 post_save.connect(updateAverage, sender=Test)
