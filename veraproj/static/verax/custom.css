@@ -23,8 +23,19 @@ h5, p, small {
     color: white;
 }
 
-body {
+
+.parallax {
+  /* The image used */
   background-image: url("DA.png");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 h2 {
