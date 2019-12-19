@@ -22,12 +22,15 @@ class Student(models.Model):
     #unused
     def calculated_ave(self):
         my_tests = Test.objects.all().filter(student=self)
-        print(my_tests)
-        sum = 0
-        for test in my_tests:
-            sum += test.grade
-        ave = sum / my_tests.count()
-        return ave
+        if my_tests.count() is 0:
+            return 0;
+        else:
+            print(my_tests)
+            sum = 0
+            for test in my_tests:
+                sum += test.grade
+            ave = sum / my_tests.count()
+            return ave
 
 
     def __str__(self):
